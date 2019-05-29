@@ -1,0 +1,27 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "call a dll with ffi",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild-ffi": "cd ./node_modules/ffi/ && node-gyp rebuild --target=4.0.0 --arch=x64 --target_arch=x64 --dist-url=https://atom.io/download/electron && cd ../ref && node-gyp rebuild --target=4.0.0 --arch=x64 --target_arch=x64 --dist-url=https://atom.io/download/electron ",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "4.0.0"
+  },
+  "dependencies": {
+    "antd": "^3.12.4",
+    "axios": "^0.18.0",
+    "ffi": "^2.2.0",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1"
+  }
+}
